@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>BF Manager</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="partie">
+            <div>
+                <form id="add-game-form">
+                    <input type="text" id="players" placeholder="nouvelle partie ...">
+                    <input type="submit" value="ajouter">
+                </form>
+            </div>
+            <div class="partie-container">
+                <div class="legend">
+                    <button>les parties</button>
+                    <button id="gamenumber">3</button>
+                </div>
+                <div id="games-container" class="games-container">
+
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="nikcname">
+                <form id="nickname-form">
+                <input id="user" type="text" placeholder="Enter your nikcname"
+                 required autocomplete="off" />
+                <button 
+                id="saveusername"
+                class="btn" type="submit"><i class="fas fa-user"></i> Save</button>
+            </form>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+
+            <div class="chat-form-container">
+                <form id="chat-form">
+                    <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+                    <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
